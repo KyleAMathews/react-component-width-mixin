@@ -2,7 +2,7 @@ var elementResizeEvent = require('element-resize-event');
 var throttle = require('lodash.throttle');
 
 module.exports = {
-  componentWillMount: function() {
+  componentDidMount: function() {
     this.onResize();
     elementResizeEvent(this.getDOMNode(), this.onResize);
   },
