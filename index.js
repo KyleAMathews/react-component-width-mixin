@@ -7,6 +7,7 @@ var throttledSetState = throttle(function() {
 
 module.exports = {
   componentDidMount: function() {
+    this.setState({componentWidth: this.getDOMNode().offsetWidth});
     elementResizeEvent(this.getDOMNode(), this.onResize);
   },
   onResize: throttledSetState
