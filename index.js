@@ -6,6 +6,11 @@ var throttledSetState = throttle(function() {
 }, 16.666); // Throttle updates to 60 FPS.
 
 module.exports = {
+  getInitialState: function() {
+    return {
+      componentWidth: this.props.initialComponentWidth
+    };
+  },
   componentDidMount: function() {
     this.setState({componentWidth: this.getDOMNode().offsetWidth});
     elementResizeEvent(this.getDOMNode(), this.onResize);
