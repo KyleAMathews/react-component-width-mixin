@@ -1,5 +1,4 @@
 var elementResizeEvent = require('element-resize-event');
-var AnimationFrame = require('AnimationFrame');
 var throttle = require('lodash.throttle');
 
 module.exports = {

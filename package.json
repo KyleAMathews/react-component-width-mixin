@@ -7,7 +7,6 @@
     "url": "https://github.com/KyleAMathews/react-component-width-mixin/issues"
   },
   "dependencies": {
-    "animation-frame": "^0.1.7",
     "element-resize-event": "^1.0.0",
     "lodash.throttle": "^2.4.1"
   },
