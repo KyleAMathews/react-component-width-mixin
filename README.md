@@ -20,4 +20,4 @@ React.createClass({
 });
 ```
 
-If you'd like to set an initial width for your component (e.g. server-side rendering) pass in a prop called `initialComponentWidth`.
+If you'd like to set an initial width for your component (e.g. server-side rendering), pass in a prop called `initialComponentWidth`.
