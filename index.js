@@ -7,9 +7,11 @@ var throttledSetState = throttle(function() {
 
 module.exports = {
   getInitialState: function() {
-    return {
-      componentWidth: this.props.initialComponentWidth
-    };
+    if (this.props.initialComponentWidth !== undefined || this.props.initialComponentWidth !== null) {
+      return {
+        componentWidth: this.props.initialComponentWidth
+      };
+    }
   },
   // Add our resize sensor.
   componentDidMount: function() {
