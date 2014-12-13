@@ -1,10 +1,6 @@
 var elementResizeEvent = require('element-resize-event');
 var throttle = require('lodash.throttle');
 
-var throttledSetState = throttle(function() {
-  this.setState({componentWidth: this.getDOMNode().offsetWidth});
-}, 16.666); // Throttle updates to 60 FPS.
-
 module.exports = {
   getInitialState: function() {
     if (this.props.initialComponentWidth !== undefined || this.props.initialComponentWidth !== null) {
@@ -24,5 +20,7 @@ module.exports = {
       elementResizeEvent(this.getDOMNode(), this.onResize);
     }
   },
-  onResize: throttledSetState
+  onResize: function () {
+    this.setState({componentWidth: this.getDOMNode().offsetWidth});
+  }
 };
