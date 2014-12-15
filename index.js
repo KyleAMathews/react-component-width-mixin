@@ -1,5 +1,4 @@
 var elementResizeEvent = require('element-resize-event');
-var throttle = require('lodash.throttle');
 
 module.exports = {
   getInitialState: function() {
