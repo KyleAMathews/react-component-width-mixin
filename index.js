@@ -2,7 +2,7 @@ var elementResizeEvent = require('element-resize-event');
 
 module.exports = {
   getInitialState: function() {
-    if (this.props.initialComponentWidth !== undefined || this.props.initialComponentWidth !== null) {
+    if (this.props.initialComponentWidth !== undefined && this.props.initialComponentWidth !== null) {
       return {
         componentWidth: this.props.initialComponentWidth
       };
