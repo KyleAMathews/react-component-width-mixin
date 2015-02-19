@@ -6,11 +6,15 @@ module.exports = {
       return {
         componentWidth: this.props.initialComponentWidth
       };
+    } else {
+      return {};
     }
   },
   // Add our resize sensor.
   componentDidMount: function() {
-    this.setState({componentWidth: this.getDOMNode().offsetWidth});
+    this.setState({
+      componentWidth: this.getDOMNode().offsetWidth
+    });
     elementResizeEvent(this.getDOMNode(), this.onResize);
   },
   // When the DOM updates, check that our resize sensor is still there.
@@ -19,7 +23,9 @@ module.exports = {
       elementResizeEvent(this.getDOMNode(), this.onResize);
     }
   },
-  onResize: function () {
-    this.setState({componentWidth: this.getDOMNode().offsetWidth});
+  onResize: function() {
+    this.setState({
+      componentWidth: this.getDOMNode().offsetWidth
+    });
   }
 };
