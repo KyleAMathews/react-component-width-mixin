@@ -7,7 +7,7 @@
     "url": "https://github.com/KyleAMathews/react-component-width-mixin/issues"
   },
   "dependencies": {
-    "element-resize-event": "^1.0.0"
+    "element-resize-event": "^2.0.0"
   },
   "homepage": "https://github.com/KyleAMathews/react-component-width-mixin",
   "keywords": [
