@@ -1,7 +1,7 @@
 {
   "name": "react-component-width-mixin",
   "description": "React mixin which detects when component resizes and sets the new width as a state variable",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
     "url": "https://github.com/KyleAMathews/react-component-width-mixin/issues"
