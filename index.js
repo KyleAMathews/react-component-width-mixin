@@ -13,7 +13,7 @@ module.exports = {
   // Add our resize sensor.
   componentDidMount: function() {
     this.setState({
-      componentWidth: this.getDOMNode().offsetWidth
+      componentWidth: this.getDOMNode().getBoundingClientRect().width
     });
     elementResizeEvent(this.getDOMNode(), this.onResize);
   },
@@ -25,7 +25,7 @@ module.exports = {
   },
   onResize: function() {
     this.setState({
-      componentWidth: this.getDOMNode().offsetWidth
+      componentWidth: this.getDOMNode().getBoundingClientRect().width
     });
   }
 };
