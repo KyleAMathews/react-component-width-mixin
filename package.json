@@ -9,6 +9,9 @@
   "dependencies": {
     "element-resize-event": "^2.0.0"
   },
+  "peerDependencies": {
+    "react-dom": ">=0.14.0"
+  },
   "homepage": "https://github.com/KyleAMathews/react-component-width-mixin",
   "keywords": [
     "react",
