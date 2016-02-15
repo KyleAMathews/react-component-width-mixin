@@ -12,7 +12,13 @@ var componentWidthMixin = require('react-component-width-mixin');
 
 React.createClass({
   mixins: [componentWidthMixin],
-  
+
+  onResize: function() {
+    // Optional hook/callback function. Called each time the element is resized.
+    // onResize will also be called when the element is instantiated and has
+    // its componentWidth set for the first time.
+  },
+
   render: function() {
     // Now the component width is available after the initial render
     // as this.state.componentWidth.

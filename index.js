@@ -15,18 +15,19 @@ module.exports = {
   componentDidMount: function() {
     this.setState({
       componentWidth: ReactDOM.findDOMNode(this).getBoundingClientRect().width
-    });
-    elementResizeEvent(ReactDOM.findDOMNode(this), this.onResize);
+    }, this.onResize);
+    elementResizeEvent(ReactDOM.findDOMNode(this), this._onResize);
   },
   // When the DOM updates, check that our resize sensor is still there.
   componentDidUpdate: function() {
     if (0 === ReactDOM.findDOMNode(this).getElementsByClassName('resize-sensor').length) {
-      elementResizeEvent(ReactDOM.findDOMNode(this), this.onResize);
+      elementResizeEvent(ReactDOM.findDOMNode(this), this._onResize);
     }
   },
-  onResize: function() {
+  _onResize: function() {
+    // Update the componentWidth and call this.onResize (if it was defined).
     this.setState({
       componentWidth: ReactDOM.findDOMNode(this).getBoundingClientRect().width
-    });
+    }, this.onResize);
   }
 };
